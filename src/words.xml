@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+  <words>  
+    <amountWords Number="5"/>
+    <word id="1">
+      <name value="one"/> 
+    </word> 
+    <word id="2">
+      <name value="two"/> 
+    </word> 
+    <word id="3">
+      <name value="three"/> 
+    </word> 
+    <word id="4">
+      <name value="twenty"/> 
+    </word> 
+    <word id="5">
+      <name value="madman"/> 
+    </word> 
+  </words>
