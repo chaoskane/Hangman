@@ -43,7 +43,8 @@ package
 				case MouseEvent.MOUSE_OUT:														
 					_assetReference.filters = [];		
 					break;
-				case MouseEvent.CLICK:														
+				case MouseEvent.CLICK:
+					SoundSystem.getInstance().playSound(SoundSystem.SOUND_CLICK, 100);
 					this.dispatchEvent(new CustomEvents(CustomEvents.CLICK_ON_BUTTON));		
 					break;
 				default:

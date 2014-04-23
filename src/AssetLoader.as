@@ -78,6 +78,13 @@ package  {
 			this.dispatchEvent(new Event(ASSETS_LOADED));		// dispatches our custom event if it is completely loaded
 		}
 		
+		public function getClassDefinition(name:String):* {
+			if (_loader.contentLoaderInfo.applicationDomain.hasDefinition(name)) {
+				return new (_loader.contentLoaderInfo.applicationDomain.getDefinition(name) as Class);
+			}
+			return null;
+		}
+				
 		/*
 		 * returns an asset by the given name
 		 * if the asset is not found it returns nothing (a null reference)

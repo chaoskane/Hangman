@@ -90,9 +90,11 @@ package
 						this.addChild(_state);
 						break;
 					case STATE_WIN:
+						SoundSystem.getInstance().playSound(SoundSystem.SOUND_WIN, 100);
 						onWin();
 						break;
 					case STATE_LOOSE:
+						SoundSystem.getInstance().playSound(SoundSystem.SOUND_LOSE, 100);
 						onLose();
 						break;
 				}

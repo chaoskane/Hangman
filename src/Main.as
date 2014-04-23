@@ -15,7 +15,7 @@ package
 		private var _xmlParser:XmlParser;			// reference to xml parser
 		private var _assetLoader:AssetLoader;		// reference to Asset loader
 		private var _gameManager:GameManager;		// reference to Game Manager
-		
+		private var _soundSystem:SoundSystem;		// reference to Sound System
 		
 		public function Main():void {
 			if (stage) {
@@ -70,6 +70,9 @@ package
 		private function onAssetsCompleteLoaded(e:Event):void {
 			_assetLoader.removeEventListener(AssetLoader.ASSETS_LOADED, onAssetsCompleteLoaded);
 			trace("ASSETS LOADED");
+			
+			_soundSystem = SoundSystem.getInstance();
+			_soundSystem.init();
 			
 			_gameManager = GameManager.getInstance();
 			_gameManager.init();
